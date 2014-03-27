@@ -34,7 +34,8 @@
 }
 
 .catpic, .hotpic {
-    height: 300px;
+    max-height: 300px;
+    max-width: 400px;
     display: block;
     margin-left: auto;
     margin-right: auto
@@ -42,4 +43,10 @@
 
 .footer {
     text-align: center;
+}
+
+.DOGETSCOM_CONTAINER {
+    position: fixed;
+    top: 0;
+    left: 0;
 }
