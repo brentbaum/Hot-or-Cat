@@ -40,11 +40,11 @@
     <div class="pictures jumbotron row col-md-10 col-md-offset-1">
         <div class="col-md-6">
             <img class="catpic" ng-src="{{hot}}">
-            <button type="button" class="btn btn-success" ng-click="hotClick()">Hot</button>
+            <button type="button" class="btn btn-success" ng-click="hotClick()" ng-disabled="disabled">Hot</button>
         </div>
         <div class="col-md-6">
             <img class="hotpic" ng-src="{{cat}}">
-            <button type="button" class="btn btn-success" ng-click="catClick()">Cat</button>
+            <button type="button" class="btn btn-success" ng-click="catClick()" ng-disabled="disabled">Cat</button>
         </div>
     </div>
     <div class="row">

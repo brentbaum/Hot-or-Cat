@@ -3,9 +3,6 @@ var catApp = angular.module("CatApp", [])
     $scope.catScore = 0;
     $scope.hotScore = 0;
 
-    $scope.cat = cats[0];
-    $scope.hot = hots[0];
-
     var catRef = new Firebase("https://hot-or-cat.firebaseio.com/");
 
     catRef.transaction(function(current_val) {
@@ -42,13 +39,20 @@ var catApp = angular.module("CatApp", [])
         newImages();
     }
 
+    $scope.disabled = false;
+
     var newImages = function () {
-        $scope.cat = cats[Math.floor((Math.random()*cats.length))];
-        $scope.hot = hots[Math.floor((Math.random()*hots.length))];
+        $scope.disabled = true;
+        $timeout(function() {
+            $scope.disabled = false;
+        }, 1000)
         $scope.cat = pics.cats[Math.floor((Math.random()*pics.cats.length))];
         $scope.hot = pics.hots[Math.floor((Math.random()*pics.hots.length))];
     }
-}]);    .service("pics", function() {
+
+    newImages();
+}])
+    .service("pics", function() {
         var service = {};
 
 
@@ -93,3 +97,4 @@ var catApp = angular.module("CatApp", [])
         ]
 
         return service;
+    });
