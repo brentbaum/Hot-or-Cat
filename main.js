@@ -1,4 +1,5 @@
-function CatCtrl($scope) {
+var catApp = angular.module("CatApp", [])
+    .controller("CatCtrl", ["$scope", function($scope) {
     var cats = [
         "http://cvcl.mit.edu/hybrid/cat2.jpg",
         "http://4.bp.blogspot.com/-8KMHR_yHZgY/TwlnSzbjvnI/AAAAAAAAAT4/-qB22fmnGoE/s640/cute-cat-sleeping.jpg",
@@ -27,13 +28,30 @@ function CatCtrl($scope) {
     $scope.cat = cats[0];
     $scope.hot = hots[0];
 
+    var catRef = new Firebase("https://hot-or-cat.firebaseio.com/");
+    catRef.transaction(function(current_val) {
+        if(!!current_val)
+            current_val["visits"]++;
+        return current_val;
+    })
+
     $scope.hotClick = function() {
         $scope.hotScore++;
+        catRef.transaction(function(current_val) {
+            if(!!current_val)
+                current_val.hotScore++;
+            return current_val;
+        });
         newImages();
     }
 
     $scope.catClick = function() {
         $scope.catScore++;
+        catRef.transaction(function(current_val) {
+            if(!!current_val)
+                current_val.catScore++;
+            return current_val;
+        });
         newImages();
     }
 
@@ -41,4 +59,4 @@ function CatCtrl($scope) {
         $scope.cat = cats[Math.floor((Math.random()*cats.length))];
         $scope.hot = hots[Math.floor((Math.random()*hots.length))];
     }
-}
+}]);
