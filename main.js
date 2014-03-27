@@ -29,17 +29,26 @@ var catApp = angular.module("CatApp", [])
     $scope.hot = hots[0];
 
     var catRef = new Firebase("https://hot-or-cat.firebaseio.com/");
+
     catRef.transaction(function(current_val) {
-        if(!!current_val)
+        if(!!current_val) {
             current_val["visits"]++;
+        }
         return current_val;
     })
+
+    catRef.on('value', function(snapshot) {
+        $scope.globalCat = snapshot.val().catScore;
+        $scope.globalHot = snapshot.val().hotScore;
+        console.log($scope.globalCat);
+    });
 
     $scope.hotClick = function() {
         $scope.hotScore++;
         catRef.transaction(function(current_val) {
             if(!!current_val)
                 current_val.hotScore++;
+            $scope.globalHot = current_val["hotScore"];
             return current_val;
         });
         newImages();
@@ -50,6 +59,7 @@ var catApp = angular.module("CatApp", [])
         catRef.transaction(function(current_val) {
             if(!!current_val)
                 current_val.catScore++;
+            $scope.globalCat = current_val["catScore"];
             return current_val;
         });
         newImages();
