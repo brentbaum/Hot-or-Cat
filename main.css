@@ -50,3 +50,9 @@
     top: 0;
     left: 0;
 }
+
+.pictures .btn-success:hover {
+    margin-top: 21px;
+    top: none;
+    bottom: none;
+}
