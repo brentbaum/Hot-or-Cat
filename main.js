@@ -72,7 +72,10 @@ var catApp = angular.module("CatApp", [])
             "http://25.media.tumblr.com/0e0beee3b240bc96ff8c84fe1642e0ee/tumblr_mhyfr25FQw1qhkkyto1_500.jpg",
             "http://legacy-cdn.smosh.com/smosh-pit/122010/ugly-cat-9.jpg",
             "http://legacy-cdn.smosh.com/smosh-pit/122010/ugly-cat-12.jpg",
-            "https://pbs.twimg.com/profile_images/378800000789782200/cd1cbe71d18e1e4d9cfc5a116815e608.jpeg"
+            "https://pbs.twimg.com/profile_images/378800000789782200/cd1cbe71d18e1e4d9cfc5a116815e608.jpeg",
+            "http://1.bp.blogspot.com/-nXnm7RTrwGY/UAGC4sIa0UI/AAAAAAAAAUU/SrUaWWN9qFo/s1600/cute-cat-photos.jpg",
+            "http://goran.mobile9.com/download/media/442/cutecat_rzyxpsns.jpg",
+            "http://cdn.cutestpaw.com/wp-content/uploads/2013/08/l-Cute-cat-biting-the-other-cat-on-cheeks.jpg"
         ]
 
         service.hots = [
@@ -93,7 +96,12 @@ var catApp = angular.module("CatApp", [])
             "http://amazing-wallpaper.com/wp-content/uploads/2014/03/to_twitter_share_to_facebook_labels_cute_girl_nice_nice_girl_reactions_in_hight_quality.jpg",
             "http://fc05.deviantart.net/fs71/f/2013/039/1/1/cute_girl_with_braids_by_zkybo-d5u8l7d.jpg",
             "http://thechive.files.wordpress.com/2012/01/the-awesome-chivettes-4.jpg",
-            "http://31.media.tumblr.com/20666dc7b8e6166afa7ba9e82a3d2cd0/tumblr_mjba8qFqrC1s444ofo1_500.png"
+            "http://31.media.tumblr.com/20666dc7b8e6166afa7ba9e82a3d2cd0/tumblr_mjba8qFqrC1s444ofo1_500.png",
+            "http://cdn.hitfix.com/photos/1854268/Justin-Bieber-concussed-after-walking-into-a-glass-wall_gallery_primary_article_story_main.jpg",
+            "http://www.colourbox.com/preview/3381411-508696-attractive-girl-of-slavic-appearance-in-ukrainian-national-costume.jpg",
+            "http://dustincharles.files.wordpress.com/2013/07/kylie-jenner-selfie-swag-twitter-winners-43.jpeg",
+            "http://img2.timeinc.net/people/i/2013/news/130506/jessica-alba-600.jpg",
+            "http://i.dailymail.co.uk/i/pix/2013/08/20/article-0-1B607BC8000005DC-996_642x639.jpg"
         ]
 
         return service;

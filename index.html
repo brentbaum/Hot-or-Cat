@@ -49,9 +49,9 @@
         </div>
     </div>
     <div class="row">
-        <div class="scoreboard panel panel-primary col-md-offset-4 col-md-4">
+        <div class="scoreboard panel panel-primary col-md-offset-1 col-md-4">
             <div class="panel-heading">
-                <h3 class="panel-title">Scoreboard</h3>
+                <h3 class="panel-title">Your Scoreboard</h3>
             </div>
             <div class="panel-body ">
                 <div class="row titles">
@@ -59,8 +59,23 @@
                     <div class="col-md-6">Cat</div>
                 </div>
                 <div class="row scores">
-                    <div class="col-md-6">{{hotScore}}({{globalHot}})</div>
-                    <div class="col-md-6">{{catScore}}({{globalCat}})</div>
+                    <div class="col-md-6">{{hotScore}}</div>
+                    <div class="col-md-6">{{catScore}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="scoreboard panel panel-primary col-md-offset-2 col-md-4">
+            <div class="panel-heading">
+                <h3 class="panel-title">Global Scoreboard</h3>
+            </div>
+            <div class="panel-body ">
+                <div class="row titles">
+                    <div class="col-md-6">Hot</div>
+                    <div class="col-md-6">Cat</div>
+                </div>
+                <div class="row scores">
+                    <div class="col-md-6">{{globalHot}}</div>
+                    <div class="col-md-6">{{globalCat}}</div>
                 </div>
             </div>
         </div>
